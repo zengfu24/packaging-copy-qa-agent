@@ -6,8 +6,8 @@
     <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="15" flood-opacity=".22"/></filter>
   </defs>
   <rect width="1600" height="1000" fill="#d7dde3"/>
-  <text x="70" y="70" font-family="Arial" font-size="30" font-weight="700" fill="#263442">CASE 02 · CONTROLLED DIFFICULT INPUT</text>
-  <text x="70" y="110" font-family="Arial" font-size="20" fill="#465665">SIMULATED PACKAGING · NO CUSTOMER DATA</text>
+  <text x="70" y="70" font-family="Arial" font-size="30" font-weight="700" fill="#263442">PACKAGING COPY QA · DIFFICULT INPUT</text>
+  <text x="70" y="110" font-family="Arial" font-size="20" fill="#465665">GLARE · BLUR · OCCLUSION</text>
 
   <g filter="url(#shadow)" transform="translate(85 165) skewY(-1)">
     <rect width="400" height="680" rx="18" fill="#f3f8ff" stroke="#5e87ac" stroke-width="3"/>
