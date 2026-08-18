@@ -130,6 +130,29 @@ function setOcrStatus(text, className = "status-idle") {
   ocrStatus.className = className;
 }
 
+function loadOcrImage(file) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => reject(new Error("图片无法读取"));
+    image.src = URL.createObjectURL(file);
+  });
+}
+
+function enhanceOcrImage(image) {
+  const maxWidth = 2200;
+  const scale = Math.min(2.4, Math.max(1.35, maxWidth / image.naturalWidth));
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.round(image.naturalWidth * scale);
+  canvas.height = Math.round(image.naturalHeight * scale);
+  const context = canvas.getContext("2d", { willReadFrequently: true });
+  context.fillStyle = "#fff";
+  context.fillRect(0, 0, canvas.width, canvas.height);
+  context.filter = "grayscale(1) contrast(1.35) brightness(1.08)";
+  context.drawImage(image, 0, 0, canvas.width, canvas.height);
+  return canvas;
+}
+
 ocrFile.addEventListener("change", () => {
   const file = ocrFile.files?.[0];
   if (!file) return;
@@ -160,10 +183,21 @@ ocrButton.addEventListener("click", async () => {
         if (message.status === "recognizing text") setOcrStatus(`本地识别 ${Math.round((message.progress || 0) * 100)}%`, "status-running");
       },
     });
-    const result = await worker.recognize(file);
+    await worker.setParameters({
+      tessedit_pageseg_mode: "6",
+      preserve_interword_spaces: "1",
+    });
+    const image = await loadOcrImage(file);
+    const enhanced = enhanceOcrImage(image);
+    setOcrStatus("正在复核清晰度", "status-running");
+    const originalResult = await worker.recognize(file);
+    const enhancedResult = await worker.recognize(enhanced);
+    const originalConfidence = originalResult.data.confidence || 0;
+    const enhancedConfidence = enhancedResult.data.confidence || 0;
+    const result = enhancedConfidence >= originalConfidence ? enhancedResult : originalResult;
     await worker.terminate();
     const text = (result.data.text || "").trim();
-    ocrOutput.textContent = text || "未识别到清晰文字。请补拍、减少反光或裁剪文字区域后重试。";
+    ocrOutput.textContent = text ? `${text}\n\n识别置信度：${Math.round(result.data.confidence || 0)}%\n提示：请逐字对照原图确认。` : "未识别到清晰文字。请补拍、减少反光或裁剪文字区域后重试。";
     setOcrStatus(text ? "识别完成 · 请人工复核" : "未识别到文字", text ? "status-pass" : "status-warn");
   } catch (error) {
     setOcrStatus("识别失败", "status-warn");
