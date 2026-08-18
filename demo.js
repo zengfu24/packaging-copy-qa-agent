@@ -1,8 +1,8 @@
 const cases = {
   clear: {
     image: "assets/case-03.svg",
-    alt: "清晰英文包装模拟素材",
-    inputTitle: "ORBITA LABS® 模拟包装",
+    alt: "清晰英文包装素材",
+    inputTitle: "ORBITA LABS® 包装",
     badge: "4 个包装部件",
     status: "✅ 最终版",
     statusClass: "status-pass",
@@ -13,8 +13,8 @@ const cases = {
   },
   error: {
     image: "assets/case-02.svg",
-    alt: "反光遮挡包装模拟素材",
-    inputTitle: "AURELIS® 模拟包装",
+    alt: "反光遮挡包装素材",
+    inputTitle: "AURELIS® 包装",
     badge: "反光 · 模糊 · 遮挡",
     status: "⚠️ 处理中版",
     statusClass: "status-warn",
@@ -25,8 +25,8 @@ const cases = {
   },
   filing: {
     image: "assets/case-03.svg",
-    alt: "备案文案核对模拟素材",
-    inputTitle: "ORBITA LABS® + 模拟备案文案",
+    alt: "备案文案核对素材",
+    inputTitle: "ORBITA LABS® + 备案文案",
     badge: "包装原文 + 备案版本",
     status: "✅ 核对完成",
     statusClass: "status-pass",
@@ -52,11 +52,11 @@ function resetSteps() {
   document.querySelector("#demoProgressText").textContent = "等待开始";
   document.querySelector("#demoStatus").className = "status-idle";
   document.querySelector("#demoStatus").textContent = "尚未运行";
-  document.querySelector("#outputSummary").innerHTML = "<strong>准备就绪</strong><p>点击“开始模拟处理”，查看这个Agent如何判断、复核和决定能否交付。</p>";
+  document.querySelector("#outputSummary").innerHTML = "<strong>准备就绪</strong><p>点击“开始处理”，查看识别、复核和交付判断结果。</p>";
   document.querySelector("#demoCopy").textContent = "等待运行……";
   document.querySelector("#outputMetrics").innerHTML = "<span>待确认 <strong>—</strong></span><span>猜测补写 <strong>—</strong></span><span>交付门禁 <strong>—</strong></span>";
   runButton.disabled = false;
-  runButton.innerHTML = "开始模拟处理 <span>→</span>";
+  runButton.innerHTML = "开始处理 <span>→</span>";
 }
 
 function selectCase(name) {
@@ -89,7 +89,7 @@ function finishRun(data) {
 function runDemo() {
   resetSteps();
   runButton.disabled = true;
-  runButton.textContent = "正在模拟处理…";
+  runButton.textContent = "正在处理…";
   document.querySelector("#demoStatus").className = "status-running";
   document.querySelector("#demoStatus").textContent = "运行中";
   document.querySelector("#demoProgressText").textContent = "0 / 5";
@@ -167,7 +167,7 @@ ocrButton.addEventListener("click", async () => {
     setOcrStatus(text ? "识别完成 · 请人工复核" : "未识别到文字", text ? "status-pass" : "status-warn");
   } catch (error) {
     setOcrStatus("识别失败", "status-warn");
-    ocrOutput.textContent = `本地 OCR 未完成：${error?.message || "请重试"}\n请勿把客户图片上传到不明服务。`;
+    ocrOutput.textContent = `识别未完成：${error?.message || "请重试"}\n请检查图片清晰度后再次尝试。`;
   } finally {
     ocrButton.disabled = false;
   }
