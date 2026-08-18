@@ -115,3 +115,60 @@ function runDemo() {
 
 tabs.forEach((tab) => tab.addEventListener("click", () => selectCase(tab.dataset.case)));
 runButton.addEventListener("click", runDemo);
+
+const ocrFile = document.querySelector("#ocrFile");
+const ocrPreview = document.querySelector("#ocrPreview");
+const ocrPlaceholder = document.querySelector("#ocrPlaceholder");
+const ocrFileName = document.querySelector("#ocrFileName");
+const ocrButton = document.querySelector("#runOcr");
+const ocrStatus = document.querySelector("#ocrStatus");
+const ocrOutput = document.querySelector("#ocrOutput");
+let ocrObjectUrl = null;
+
+function setOcrStatus(text, className = "status-idle") {
+  ocrStatus.textContent = text;
+  ocrStatus.className = className;
+}
+
+ocrFile.addEventListener("change", () => {
+  const file = ocrFile.files?.[0];
+  if (!file) return;
+  if (ocrObjectUrl) URL.revokeObjectURL(ocrObjectUrl);
+  ocrObjectUrl = URL.createObjectURL(file);
+  ocrPreview.src = ocrObjectUrl;
+  ocrPreview.hidden = false;
+  ocrPlaceholder.hidden = true;
+  ocrFileName.textContent = `${file.name} · ${(file.size / 1024 / 1024).toFixed(2)} MB`;
+  ocrButton.disabled = false;
+  ocrOutput.textContent = "已载入本地图片，点击“本地识别”开始。";
+  setOcrStatus("已准备", "status-pass");
+});
+
+ocrButton.addEventListener("click", async () => {
+  const file = ocrFile.files?.[0];
+  if (!file || !window.Tesseract) {
+    setOcrStatus("OCR 程序未加载", "status-warn");
+    ocrOutput.textContent = "请检查网络后刷新页面；图片仍不会被上传。";
+    return;
+  }
+  ocrButton.disabled = true;
+  setOcrStatus("本地处理中", "status-running");
+  ocrOutput.textContent = "正在浏览器本地识别……\n图片不会离开当前设备。";
+  try {
+    const worker = await Tesseract.createWorker("eng", 1, {
+      logger: (message) => {
+        if (message.status === "recognizing text") setOcrStatus(`本地识别 ${Math.round((message.progress || 0) * 100)}%`, "status-running");
+      },
+    });
+    const result = await worker.recognize(file);
+    await worker.terminate();
+    const text = (result.data.text || "").trim();
+    ocrOutput.textContent = text || "未识别到清晰文字。请补拍、减少反光或裁剪文字区域后重试。";
+    setOcrStatus(text ? "识别完成 · 请人工复核" : "未识别到文字", text ? "status-pass" : "status-warn");
+  } catch (error) {
+    setOcrStatus("识别失败", "status-warn");
+    ocrOutput.textContent = `本地 OCR 未完成：${error?.message || "请重试"}\n请勿把客户图片上传到不明服务。`;
+  } finally {
+    ocrButton.disabled = false;
+  }
+});
