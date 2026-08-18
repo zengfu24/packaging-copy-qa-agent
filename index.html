@@ -31,7 +31,7 @@
       <div class="demo-notice"><span>●</span><strong>安全演示模式</strong><span>预设案例不上传文件；下方“本地识别”只在你的浏览器内处理图片，不连接你的 API。</span></div>
       <div class="local-ocr" id="localOcr">
         <div class="local-ocr-copy"><span class="tag pass">本地识别 · 图片不离开设备</span><h3>上传一张包装照片，直接试用 OCR</h3><p>识别在浏览器本地完成。图片不会发送到网站、我的 API 或客户资源；首次使用只会从公开 CDN 下载 OCR 程序和英文模型。</p></div>
-        <div class="local-ocr-controls"><label class="file-picker" for="ocrFile">选择包装图片</label><input id="ocrFile" type="file" accept="image/*"><span id="ocrFileName">尚未选择文件</span><button class="run-demo local-run" id="runOcr" type="button" disabled>本地识别 <span>→</span></button></div>
+        <div class="local-ocr-controls"><label class="file-picker" for="ocrFile">选择包装图片</label><input id="ocrFile" type="file" accept="image/png,image/jpeg,image/webp"><span id="ocrFileName">尚未选择文件</span><button class="run-demo local-run" id="runOcr" type="button" disabled>本地识别 <span>→</span></button></div>
         <div class="local-ocr-grid"><div class="ocr-preview"><img id="ocrPreview" alt="本地预览" hidden><span id="ocrPlaceholder">图片预览</span></div><div class="ocr-result"><div class="workbench-label"><span>本地 OCR 结果</span><span id="ocrStatus" class="status-idle">等待图片</span></div><pre id="ocrOutput">选择图片后，结果会显示在这里。</pre></div></div>
       </div>
       <div class="demo-tabs" role="tablist" aria-label="选择模拟案例">
