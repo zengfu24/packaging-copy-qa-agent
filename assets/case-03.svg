@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf1ea"/><stop offset="1" stop-color="#cfd9cf"/></linearGradient>
+    <linearGradient id="label3" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffdf4"/><stop offset="1" stop-color="#f2ead2"/></linearGradient>
+    <filter id="shadow3"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-opacity=".2"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#e2e9e1"/>
+  <text x="65" y="66" font-family="Arial" font-size="30" font-weight="700" fill="#203c31">CASE 03 · DENSE COPY + FILING COMPARISON</text>
+  <text x="65" y="105" font-family="Arial" font-size="20" fill="#486158">SIMULATED PACKAGING · NO CUSTOMER DATA</text>
+
+  <g transform="translate(70 155)" filter="url(#shadow3)">
+    <rect width="380" height="700" rx="90" fill="#e9efe7" stroke="#557564" stroke-width="4"/>
+    <rect x="45" y="105" width="290" height="510" rx="20" fill="#fffdf4" stroke="#99885d" stroke-width="2"/>
+    <text x="190" y="180" text-anchor="middle" font-family="Georgia" font-size="30" font-weight="700" fill="#203c31">ORBITA LABS®</text>
+    <path d="M100 210h180" stroke="#819b6c" stroke-width="2"/>
+    <text x="190" y="275" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="#203c31">BOTANICAL</text>
+    <text x="190" y="309" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="#203c31">HAND WASH</text>
+    <text x="190" y="370" text-anchor="middle" font-family="Arial" font-size="20" fill="#49644e">pH 5.5 · SOAP-FREE</text>
+    <circle cx="190" cy="455" r="54" fill="none" stroke="#819b6c" stroke-width="2"/>
+    <path d="M190 415c-28 40-35 60 0 78c35-18 28-38 0-78z" fill="#819b6c"/>
+    <text x="190" y="560" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#203c31">e 250 mL</text>
+    <text x="190" y="670" text-anchor="middle" font-family="Arial" font-size="14" fill="#486158">BOTTLE FRONT</text>
+  </g>
+
+  <g transform="translate(485 135)" filter="url(#shadow3)">
+    <rect width="620" height="740" rx="72" fill="#e9efe7" stroke="#557564" stroke-width="4"/>
+    <rect x="35" y="70" width="550" height="605" rx="18" fill="#fffdf4" stroke="#99885d" stroke-width="2"/>
+    <text x="60" y="118" font-family="Arial" font-size="22" font-weight="700" fill="#203c31">ORBITA LABS® · BOTANICAL HAND WASH</text>
+    <text x="60" y="160" font-family="Arial" font-size="16" fill="#263a31">GENTLE DAILY CLEANSER WITH BOTANICAL EXTRACTS.</text>
+    <text x="60" y="207" font-family="Arial" font-size="15" font-weight="700" fill="#203c31">INGREDIENTS:</text>
+    <text x="60" y="232" font-family="Arial" font-size="15" fill="#263a31">AQUA, SODIUM LAURETH SULFATE, COCAMIDOPROPYL</text>
+    <text x="60" y="256" font-family="Arial" font-size="15" fill="#263a31">BETAINE, GLYCERIN, SODIUM CHLORIDE, ALOE BARBADENSIS LEAF</text>
+    <text x="60" y="280" font-family="Arial" font-size="15" fill="#263a31">JUICE, CITRIC ACID, SODIUM BENZOATE, PARFUM.</text>
+    <text x="60" y="326" font-family="Arial" font-size="15" font-weight="700" fill="#203c31">DIRECTIONS:</text>
+    <text x="60" y="350" font-family="Arial" font-size="15" fill="#263a31">PUMP ONTO WET HANDS, LATHER FOR 20 SECONDS,</text>
+    <text x="60" y="374" font-family="Arial" font-size="15" fill="#263a31">THEN RINSE THOROUGHLY.</text>
+    <text x="60" y="420" font-family="Arial" font-size="15" font-weight="700" fill="#203c31">WARNING:</text>
+    <text x="60" y="444" font-family="Arial" font-size="15" fill="#263a31">KEEP AWAY FROM EYES. KEEP OUT OF REACH OF CHILDREN.</text>
+    <text x="60" y="492" font-family="Arial" font-size="15" fill="#263a31">LOT: Q7A-26</text>
+    <text x="60" y="516" font-family="Arial" font-size="15" fill="#263a31">PAO: 12M</text>
+    <text x="60" y="540" font-family="Arial" font-size="15" fill="#263a31">MADE IN NEW ZEALAND</text>
+    <g transform="translate(230 570)">
+      <path d="M5 0v55m9-55v55m13-55v55m6-55v55m15-55v55m8-55v55m6-55v55m14-55v55m10-55v55m7-55v55m13-55v55m6-55v55m18-55v55m8-55v55m6-55v55m14-55v55m8-55v55m13-55v55m6-55v55m15-55v55" stroke="#111" stroke-width="4"/>
+      <text x="140" y="76" text-anchor="middle" font-family="Courier New" font-size="18">6972468135799</text>
+    </g>
+    <text x="310" y="720" text-anchor="middle" font-family="Arial" font-size="14" fill="#486158">BOTTLE BACK · SMALL TEXT / SYMBOLS / UNITS</text>
+  </g>
+
+  <g transform="translate(1140 180)" filter="url(#shadow3)">
+    <rect width="270" height="630" rx="65" fill="#e9efe7" stroke="#557564" stroke-width="4"/>
+    <rect x="35" y="90" width="200" height="455" rx="14" fill="#fffdf4" stroke="#99885d" stroke-width="2"/>
+    <text x="135" y="168" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#203c31">VEGAN</text>
+    <text x="135" y="238" text-anchor="middle" font-family="Arial" font-size="20" fill="#203c31">CRUELTY-FREE</text>
+    <text x="135" y="320" text-anchor="middle" font-family="Arial" font-size="17" fill="#203c31">97% NATURALLY</text>
+    <text x="135" y="346" text-anchor="middle" font-family="Arial" font-size="17" fill="#203c31">DERIVED</text>
+    <text x="135" y="440" text-anchor="middle" font-family="Arial" font-size="14" fill="#203c31">www.orbitalabs.example</text>
+    <text x="135" y="610" text-anchor="middle" font-family="Arial" font-size="14" fill="#486158">BOTTLE SIDE</text>
+  </g>
+
+  <g transform="translate(1430 260)" filter="url(#shadow3)">
+    <circle cx="65" cy="65" r="62" fill="#203c31" stroke="#b4c6aa" stroke-width="6"/>
+    <text x="65" y="55" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="white">PRESS ↓</text>
+    <text x="65" y="84" text-anchor="middle" font-family="Arial" font-size="16" fill="white">LOCK</text>
+    <text x="65" y="158" text-anchor="middle" font-family="Arial" font-size="14" fill="#203c31">PUMP TOP</text>
+  </g>
+  <text x="800" y="948" text-anchor="middle" font-family="Arial" font-size="18" fill="#3a5147">Controlled focus: dense copy · ® · pH · mL · lot code · barcode · filing differences</text>
+</svg>
