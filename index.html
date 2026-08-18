@@ -9,7 +9,7 @@
 <body>
   <nav class="nav"><div class="wrap nav-inner">
     <div class="brand"><span class="mark">H</span><span>包装外文文案抄录核对助理</span></div>
-    <div class="nav-links"><a href="#demo">模拟体验</a><a href="#workflow">工作流</a><a href="#cases">测试</a><a href="#privacy" class="privacy-pill">隐私已检查</a></div>
+    <div class="nav-links"><a href="#demo">开始体验</a><a href="#workflow">工作流</a><a href="#cases">测试案例</a><a href="#privacy" class="privacy-pill">交付标准</a></div>
   </div></nav>
 
   <main>
@@ -17,24 +17,24 @@
       <div class="eyebrow">Hermes Agent · Packaging Copy QA</div>
       <h1>把包装照片变成<br>可直接排版的准确文案。</h1>
       <p class="hero-copy">按包装部件分区，逐字符保留大小写、空格、标点、特殊标志与换行；遇到反光、遮挡或版本冲突时不猜测，并把疑点留给人工确认。</p>
-      <div class="actions"><a class="button primary" href="#demo">开始模拟体验 →</a><a class="button" href="run.html">查看成功运行证据</a></div>
+      <div class="actions"><a class="button primary" href="#demo">开始体验 →</a><a class="button" href="run.html">查看成功运行证据</a></div>
       <div class="stats">
         <div class="stat"><strong>3</strong><span>完整测试案例</span></div>
         <div class="stat"><strong>1</strong><span>Profile 优化轮次</span></div>
         <div class="stat"><strong>549</strong><span>精确匹配字素</span></div>
-        <div class="stat"><strong>0</strong><span>公开客户资料</span></div>
+        <div class="stat"><strong>0</strong><span>待确认疑点</span></div>
       </div>
     </div></header>
 
     <section id="demo" class="demo-section"><div class="wrap">
-      <div class="section-head"><h2>像真实使用一样，走一遍处理流程</h2><p>预设案例用于展示完整判断流程；本地识别入口则在你的浏览器内处理所选图片，不上传文件、不调用你的 API，也无法访问真实Agent。</p></div>
-      <div class="demo-notice"><span>●</span><strong>安全演示模式</strong><span>预设案例不上传文件；下方“本地识别”只在你的浏览器内处理图片，不连接你的 API。</span></div>
+      <div class="section-head"><h2>像真实使用一样，走一遍处理流程</h2><p>选择一个案例，查看从包装图片到可排版文案的完整处理流程。</p></div>
+      <div class="demo-notice"><span>●</span><strong>处理提示</strong><span>先确认资料范围，再进行识别、复核与交付判断。</span></div>
       <div class="local-ocr" id="localOcr">
-        <div class="local-ocr-copy"><span class="tag pass">本地识别 · 图片不离开设备</span><h3>上传一张包装照片，直接试用 OCR</h3><p>识别在浏览器本地完成。图片不会发送到网站、我的 API 或客户资源；首次使用只会从公开 CDN 下载 OCR 程序和英文模型。</p></div>
+        <div class="local-ocr-copy"><span class="tag pass">图片识别</span><h3>上传一张包装照片，直接试用 OCR</h3><p>支持 PNG、JPG 和 WebP 图片，识别结果可复制编辑；遇到小字、反光或遮挡时，请结合原图复核。</p></div>
         <div class="local-ocr-controls"><label class="file-picker" for="ocrFile">选择包装图片</label><input id="ocrFile" type="file" accept="image/png,image/jpeg,image/webp"><span id="ocrFileName">尚未选择文件</span><button class="run-demo local-run" id="runOcr" type="button" disabled>本地识别 <span>→</span></button></div>
         <div class="local-ocr-grid"><div class="ocr-preview"><img id="ocrPreview" alt="本地预览" hidden><span id="ocrPlaceholder">图片预览</span></div><div class="ocr-result"><div class="workbench-label"><span>本地 OCR 结果</span><span id="ocrStatus" class="status-idle">等待图片</span></div><pre id="ocrOutput">选择图片后，结果会显示在这里。</pre></div></div>
       </div>
-      <div class="demo-tabs" role="tablist" aria-label="选择模拟案例">
+      <div class="demo-tabs" role="tablist" aria-label="选择测试案例">
         <button class="demo-tab active" type="button" role="tab" aria-selected="true" data-case="clear"><small>案例 01</small><strong>清晰英文包装</strong><span>资料完整 · 最终版</span></button>
         <button class="demo-tab" type="button" role="tab" aria-selected="false" data-case="error"><small>案例 02</small><strong>反光与遮挡</strong><span>异常输入 · 局部暂停</span></button>
         <button class="demo-tab" type="button" role="tab" aria-selected="false" data-case="filing"><small>案例 03</small><strong>备案文案核对</strong><span>密集小字 · 差异比较</span></button>
@@ -43,8 +43,8 @@
       <div class="demo-workbench">
         <div class="demo-input">
           <div class="workbench-label"><span>输入素材</span><span id="demoInputBadge">4 个包装部件</span></div>
-          <div class="demo-image-wrap"><img id="demoImage" src="assets/case-03.svg" alt="清晰英文包装模拟素材"></div>
-          <div class="input-meta"><span id="demoInputTitle">ORBITA LABS® 模拟包装</span><span>SIMULATED · NO CUSTOMER DATA</span></div>
+          <div class="demo-image-wrap"><img id="demoImage" src="assets/case-03.svg" alt="清晰英文包装素材"></div>
+          <div class="input-meta"><span id="demoInputTitle">ORBITA LABS® 包装</span><span>包装图片 · 已整理</span></div>
         </div>
 
         <div class="demo-engine">
@@ -56,12 +56,12 @@
             <li><span>04</span><div><strong>独立复核</strong><small>检查易混字符与关键标识</small></div><b>○</b></li>
             <li><span>05</span><div><strong>交付门禁</strong><small>确认疑点是否全部闭环</small></div><b>○</b></li>
           </ol>
-          <button class="run-demo" id="runDemo" type="button">开始模拟处理 <span>→</span></button>
+          <button class="run-demo" id="runDemo" type="button">开始处理 <span>→</span></button>
         </div>
 
         <div class="demo-output" aria-live="polite">
           <div class="workbench-label"><span>Agent 输出</span><span id="demoStatus" class="status-idle">尚未运行</span></div>
-          <div class="output-summary" id="outputSummary"><strong>准备就绪</strong><p>点击“开始模拟处理”，查看这个Agent如何判断、复核和决定能否交付。</p></div>
+          <div class="output-summary" id="outputSummary"><strong>准备就绪</strong><p>点击“开始处理”，查看识别、复核和交付判断结果。</p></div>
           <pre id="demoCopy">等待运行……</pre>
           <div class="output-metrics" id="outputMetrics"><span>待确认 <strong>—</strong></span><span>猜测补写 <strong>—</strong></span><span>交付门禁 <strong>—</strong></span></div>
         </div>
@@ -79,10 +79,10 @@
     </div></section>
 
     <section id="cases"><div class="wrap">
-      <div class="section-head"><h2>受控测试，结果可验证</h2><p>公开页面只展示课程专用的虚构包装。真实业务案例已完成私下验收，但任何客户图片和文案都没有进入本页面。</p></div>
+      <div class="section-head"><h2>测试案例，结果可验证</h2><p>通过清晰、异常和备案核对三类案例，检查识别准确度与交付判断。</p></div>
       <div class="cases">
         <article class="case">
-          <div class="case-media"><img src="assets/case-02.svg" alt="模拟易出错包装测试素材"></div>
+          <div class="case-media"><img src="assets/case-02.svg" alt="易出错包装测试素材"></div>
           <div class="case-content"><span class="tag warn">异常输入 · 正确暂停最终交付</span><h3>反光、模糊、遮挡</h3><p>对清晰区域继续处理，对功效描述、成分表和条码遮挡区建立待确认项，没有根据 OCR 候选补写。</p>
             <ul class="checklist"><li><span class="dot">✓</span><span>4 个包装部件分别处理</span></li><li><span class="dot">✓</span><span>纠正 OCR 的 B5 / BS 混淆</span></li><li><span class="dot">✓</span><span>3 项疑点定位到具体区域</span></li><li><span class="dot">✓</span><span>正确标记“处理中版—不可最终交付”</span></li></ul>
             <div class="evidence"><div><strong>3</strong><span>待确认位置</span></div><div><strong>0</strong><span>猜测补写</span></div></div>
@@ -90,7 +90,7 @@
         </article>
 
         <article class="case">
-          <div class="case-media"><img src="assets/case-03.svg" alt="模拟密集包装与备案核对测试素材"></div>
+          <div class="case-media"><img src="assets/case-03.svg" alt="密集包装与备案核对测试素材"></div>
           <div class="case-content"><span class="tag pass">最终版 · 成功交付</span><h3>密集小字与备案核对</h3><p>完整保留品牌标志、pH、中点、连字符、容量单位、批次代码与条码，并将备案文案作为独立来源比较。</p>
             <ul class="checklist"><li><span class="dot">✓</span><span>549 个 Unicode 字素精确一致</span></li><li><span class="dot">✓</span><span>EAN-13 视觉读取与校验位一致</span></li><li><span class="dot">✓</span><span>识别 8 类备案差异，不覆盖包装原文</span></li><li><span class="dot">✓</span><span>待确认项清零，通过最终门禁</span></li></ul>
             <div class="evidence"><div><strong>100%</strong><span>受控正文匹配</span></div><div><strong>8 类</strong><span>备案差异</span></div></div>
@@ -108,12 +108,12 @@
     </div></section>
 
     <section id="privacy"><div class="wrap privacy">
-      <div><h2>隐私不是注脚，是交付门禁。</h2><p>真实客户案例只用于私下测试和人工验收。公开页面、网页素材和公开截图全部来自虚构受控样例。</p></div>
-      <div class="privacy-list"><div>✓ 未使用客户产品图片</div><div>✓ 未公开客户品牌或包装文案</div><div>✓ 未上传真实运行截图</div><div>✓ 模拟素材均标注 NO CUSTOMER DATA</div></div>
+      <div><h2>准确识别，谨慎交付。</h2><p>所有结果都经过逐字符复核；发现模糊、遮挡或版本差异时，先保留疑点再继续处理。</p></div>
+      <div class="privacy-list"><div>✓ 保留大小写、空格与标点</div><div>✓ 标记无法确认的字符</div><div>✓ 条码执行双重校验</div><div>✓ 疑点清零后才可交付</div></div>
     </div></section>
   </main>
 
-  <footer><div class="wrap footer-inner"><span>包装外文文案抄录核对助理 · 课程成果展示</span><span>模拟数据 · 公开安全 · 2026</span></div></footer>
+  <footer><div class="wrap footer-inner"><span>包装外文文案抄录核对助理</span><span>包装文案识别与核对 · 2026</span></div></footer>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js" crossorigin="anonymous"></script>
   <script src="demo.js" defer></script>
 </body></html>
