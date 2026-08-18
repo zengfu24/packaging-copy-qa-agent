@@ -106,6 +106,20 @@ section { padding: 76px 0; }
 .output-metrics span { padding:9px; border-radius:10px; background:#f1f3ee; color:var(--muted); font-size:10px; }
 .output-metrics strong { display:block; margin-top:2px; color:var(--ink); font-size:13px; }
 
+.local-ocr { margin:22px 0 28px; padding:24px; border:1px solid #b9d2c3; border-radius:22px; background:#edf6ef; }
+.local-ocr-copy h3 { margin:14px 0 8px; font-size:24px; letter-spacing:-.03em; }
+.local-ocr-copy p { max-width:760px; margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
+.local-ocr-controls { display:flex; align-items:center; flex-wrap:wrap; gap:12px; margin:20px 0; }
+.local-ocr-controls input { position:absolute; width:1px; height:1px; opacity:0; pointer-events:none; }
+.file-picker { padding:11px 14px; border-radius:12px; color:#fff; background:var(--green); font-size:13px; font-weight:800; cursor:pointer; }
+#ocrFileName { color:var(--muted); font-size:12px; }
+.local-run { width:auto; margin:0 0 0 auto; padding:11px 16px; }
+.local-ocr-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:14px; }
+.ocr-preview,.ocr-result { min-height:190px; padding:16px; border:1px solid var(--line); border-radius:16px; background:var(--card); }
+.ocr-preview { display:grid; place-items:center; overflow:hidden; color:var(--muted); font-size:12px; }
+.ocr-preview img { width:100%; max-height:250px; object-fit:contain; border-radius:10px; }
+.ocr-result pre { min-height:125px; max-height:250px; overflow:auto; margin:0; padding:14px; border-radius:12px; background:#18211e; color:#e8f1ec; font:12px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace; white-space:pre-wrap; }
+
 .cases { display:grid; gap:24px; }
 .case { display:grid; grid-template-columns:1.15fr .85fr; gap:0; overflow:hidden; border:1px solid var(--line); border-radius:28px; background:var(--card); box-shadow:var(--shadow); }
 .case-media { min-height:430px; background:#e6ece8; display:grid; place-items:center; padding:24px; }
@@ -160,6 +174,8 @@ footer { margin-top:70px; border-top:1px solid var(--line); padding:28px 0 46px;
   .case-media { min-height:300px; }
   .demo-workbench { grid-template-columns:1fr 1fr; }
   .demo-output { grid-column:1/-1; border-top:1px solid var(--line); }
+  .local-ocr-grid { grid-template-columns:1fr; }
+  .local-run { width:100%; margin-left:0; }
 }
 @media (max-width: 620px) {
   .nav-links a:not(.privacy-pill) { display:none; }
