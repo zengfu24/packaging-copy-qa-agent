@@ -5,8 +5,8 @@
     <filter id="shadow3"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-opacity=".2"/></filter>
   </defs>
   <rect width="1600" height="1000" fill="#e2e9e1"/>
-  <text x="65" y="66" font-family="Arial" font-size="30" font-weight="700" fill="#203c31">CASE 03 · DENSE COPY + FILING COMPARISON</text>
-  <text x="65" y="105" font-family="Arial" font-size="20" fill="#486158">SIMULATED PACKAGING · NO CUSTOMER DATA</text>
+  <text x="65" y="66" font-family="Arial" font-size="30" font-weight="700" fill="#203c31">PACKAGING COPY QA · DENSE COPY</text>
+  <text x="65" y="105" font-family="Arial" font-size="20" fill="#486158">SMALL TEXT · SYMBOLS · UNITS</text>
 
   <g transform="translate(70 155)" filter="url(#shadow3)">
     <rect width="380" height="700" rx="90" fill="#e9efe7" stroke="#557564" stroke-width="4"/>
